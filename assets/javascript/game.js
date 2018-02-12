@@ -108,13 +108,10 @@ var maul ={
 		return Math.floor(this.health/this.power*100);
 	}
 };
-console.log(yoda,leia,luke,maul);
 var charArray = [yoda, leia, luke, maul];
 for(var i=0; i<charArray.length; i++) {
 	$("#"+charArray[i].divName).text(charArray[i].health);
 	$("#"+charArray[i].divName).attr("style", "width:"+charArray[i].percentage()+"%");
-	console.log(charArray[i].divName)
-	console.log(charArray[i])
 }
 $(document).ready(function() {
 	var actDescr = [
@@ -177,7 +174,6 @@ $(document).ready(function() {
 				$("#oppochar").html('<h2>Defender Lost</h2>');
 				$("#gameInst").text("SELECT NEXT OPPONENT...");
 				remainOpponent--;
-				console.log (remainOpponent)
 				if(remainOpponent <= 0) {
 					gameStep = 4;
 					dispMsg = actDescr[gameStep];
@@ -192,7 +188,7 @@ $(document).ready(function() {
 			$("#"+oppoChar.divName).attr("style", "width:"+oppoChar.percentage()+"%");
 			dispMsg += (oppoChar.name + " attacked you back for " + oppoChar.powerContAttack + " damage.");
 			if(!yourChar.setDamage(oppoChar.powerContAttack)) {
-				$("#yourchar").html('<h2>You were defeated</h2>');
+				$("#yourchar").html("<h2>You've been defeated</h2>");
 				$("#gameInst").text("");
 				$("#"+yourChar.divName).text("0");
 				$("#"+yourChar.divName).attr("style", "width:0%");
@@ -202,7 +198,6 @@ $(document).ready(function() {
 			else{
 				$("#"+yourChar.divName).text(yourChar.health);
 				$("#"+yourChar.divName).attr("style", "width:"+yourChar.percentage()+"%");
-				console.log("you per" + yourChar.percentage() );
 			}
 		}
 		$("#actDesc").html(dispMsg);
