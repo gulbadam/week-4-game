@@ -1,0 +1,43 @@
+ 
+body{
+	background-image: url("../images/yellow.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Days One', sans-serif;
+	color: #502702;
+	text-align: center;
+} 
+	
+img{
+	width: 9rem;
+}
+.charGrp {
+	border: 0.5rem solid white;
+	border-radius: 0.5rem;
+	text-align: center;
+
+}
+h3 {
+	font-size: 1rem;
+	text-align: center;
+	font-family: 'Cabin Sketch', cursive;
+}
+h2{
+	font-size: 1.2rem;
+	color: #502702;
+}
+
+#logo {
+	border: 0;
+	margin-top: 3rem;
+	text-align: center;
+
+}
+#vs {
+	margin-top: 5rem;
+}
+.btn {
+	width: 7rem;
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+}
